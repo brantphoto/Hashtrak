@@ -21,6 +21,9 @@ Hashtrek::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'searches#new'
 
+  namespace :api, defaults: {format: :json} do
+   resources :related_hashtags, only: [:index]
+  end
   
   resources :searches
 
@@ -28,9 +31,7 @@ Hashtrek::Application.routes.draw do
   resources :related_hashtags
   end 
 
-  namespace :api do
-   resources :related_hashtags
-  end
+ 
   
 
 

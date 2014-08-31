@@ -49,17 +49,17 @@ class SearchesController < ApplicationController
   def relate_to_tag(pozt)
     array = pozt.hashtags
     array.each do |t|
-	    if RelatedHashtag.exists?(:name => t)
-	      x = RelatedHashtag.where(:name => t).first
-	      RelatedHashtagPost.create(related_hashtag:x, post:pozt)
-	    else
-	      x = RelatedHashtag.create(name:t)
-	      RelatedHashtagPost.create(related_hashtag:x, post:pozt)
-	    end
-    end
-  end
+     if RelatedHashtag.exists?(:name => t)
+       x = RelatedHashtag.where(:name => t).first
+       RelatedHashtagPost.create(related_hashtag:x, post:pozt)
+     else
+       x = RelatedHashtag.create(name:t)
+       RelatedHashtagPost.create(related_hashtag:x, post:pozt)
+     end
+   end
+ end
 
 
-  def destroy
-  end 
+ def destroy
+ end 
 end

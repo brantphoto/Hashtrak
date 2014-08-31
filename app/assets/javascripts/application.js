@@ -15,8 +15,6 @@
 //= require d3
 //= require turbolinks
 //= require jquery
-//= require lib/angular.min
-//= require lib/angular-resource.min
 //= require bootstrap-sprockets
 //= require_tree .
 

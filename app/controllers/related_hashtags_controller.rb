@@ -32,6 +32,7 @@ class RelatedHashtagsController < ApplicationController
   private 
   def get_hashtag_feed
     @hashtag_feed = HashtagFeed.find(params[:hashtag_feed_id])
+    # render json: HashtagFeed.find(params[:hashtag_feed_id])
   end
 
  
