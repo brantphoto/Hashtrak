@@ -3,6 +3,13 @@ class RelatedHashtagsController < ApplicationController
   
   def index
     @posts = @hashtag_feed.posts
+    @array = []
+    @posts.each do |x|
+      x.related_hashtags.each do |y|
+        @array.push(y)
+      end
+    end
+    @array = @array.uniq
     @hashtag_feeds = HashtagFeed.all
   end
 

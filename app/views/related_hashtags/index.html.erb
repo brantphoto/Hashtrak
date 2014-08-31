@@ -1,7 +1,7 @@
 <div class="bnw">
-	<% @posts.each do |x| %>
-		<% x.related_hashtags.each do |i| %>
-			<%= i.name %> 
-		<% end %>
-	<% end %>
+  <h1> Results for Hashtag Feed:<%=@hashtag_feed.name %> <br></h1>
+    
+  <% @array.uniq.sort_by!{ |m| m[:name] }.each do |p| %>
+    "<%= p.name %> " shows up <%=p.posts.where(hashtag_feed:@hashtag_feed).count %> times <br>
+  <% end %>
 </div> 
