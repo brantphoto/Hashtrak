@@ -1,4 +1,7 @@
 Hashtrek::Application.configure do
+
+  #to prevent the asset pipeline may break some of your AngularJS code due to renaming
+  config.assets.js_compressor = Uglifier.new(mangle: false)
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.

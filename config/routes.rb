@@ -21,10 +21,18 @@ Hashtrek::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'searches#new'
 
+  
   resources :searches
+
   resources :hashtag_feeds do
-    resources :related_hashtags
+  resources :related_hashtags
   end 
+
+  namespace :api do
+   resources :related_hashtags
+  end
+  
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
