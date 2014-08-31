@@ -29,6 +29,10 @@ class RelatedHashtagsController < ApplicationController
   def destroy
   end
 
+  def show
+  @related_hashtags = render json: RelatedHashtag.all
+  end
+
   private 
   def get_hashtag_feed
     @hashtag_feed = HashtagFeed.find(params[:hashtag_feed_id])

@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 
+
 #gem for rendering objects into JSON
+gem 'active_model_serializers' 
+
+#render json
 gem 'active_model_serializers' 
 
 ruby '2.1.2'
