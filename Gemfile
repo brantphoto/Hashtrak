@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+#render json
+gem 'active_model_serializers' 
 ruby '2.1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.4'
