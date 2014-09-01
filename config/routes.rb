@@ -22,15 +22,9 @@ Hashtrek::Application.routes.draw do
   root 'searches#new'
 
   namespace :api, defaults: {format: :json} do
-<<<<<<< HEAD
    resources :related_hashtags, only: [:index]
   end
-  
-=======
-     resources :related_hashtags, only: [:index]
-  end
 
->>>>>>> levani-angular
   resources :searches
 
   resources :hashtag_feeds do

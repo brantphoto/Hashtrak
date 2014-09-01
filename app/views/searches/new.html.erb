@@ -1,4 +1,13 @@
-<%= form_for @search, :html => {class: "form-group"} do |f| %>
+<div class="container">
+  
+  <div class="text-center">
+    <h1>Hashtag Discovery Tool</h1>
+    <p class="lead">No Gimmicks. Straight Data. Pure Profit.</p>
+  </div>
+  <%= form_for @search, :html => {class: "form-group"} do |f| %>
 	<%= f.text_field :topic, class: "form-control", placeholder: "Put a hashtag name in here, no # for now" %><br/>	
 	<%= f.submit class:"btn btn-default" %>
-<% end %>s
+<% end %>
+  
+</div><!-- /.container -->
+
